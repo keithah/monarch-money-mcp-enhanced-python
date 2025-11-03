@@ -11,6 +11,7 @@ on:
 
 jobs:
   build-and-publish:
+    timeout-minutes: 8
     runs-on: ubuntu-latest
     
     steps:
