@@ -5,7 +5,7 @@ on:
     # Check for updates every 6 hours
     - cron: '0 */6 * * *'
   workflow_dispatch:
-    # Allow manual triggering
+  # Allow manual triggering
 
 permissions:
   contents: write
@@ -14,8 +14,8 @@ permissions:
 jobs:
   check-and-release:
     timeout-minutes: 8
-    runs-on: ubuntu-latest
-    
+    runs-on: tenki-standard-medium-4c-8g
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -47,7 +47,8 @@ jobs:
         key: ${{ runner.os }}-uv-${{ hashFiles('**/uv.lock') }}
         restore-keys: |
           ${{ runner.os }}-uv-
-      
+
+
     - name: Get current monarchmoney-enhanced version
       id: current-version
       run: |
