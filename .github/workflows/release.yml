@@ -18,7 +18,7 @@ permissions:
 jobs:
   create-release:
     timeout-minutes: 10
-    runs-on: tenki-standard-medium-4c-8g
+    runs-on: ubicloud-standard-2
 
     steps:
     - name: Checkout repository

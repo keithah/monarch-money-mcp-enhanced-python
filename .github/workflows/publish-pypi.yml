@@ -12,8 +12,8 @@ on:
 jobs:
   build-and-publish:
     timeout-minutes: 8
-    runs-on: tenki-standard-medium-4c-8g
-
+    runs-on: ubicloud-standard-2
+    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
